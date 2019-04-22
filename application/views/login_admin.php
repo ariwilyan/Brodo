@@ -38,7 +38,7 @@
     <nav class="navbar navbar-expand-sm bg-white navbar-white justify-content-center">
         <!-- Logo -->
         <a class="navbar-brand" href="#" style="centered">
-            <img src="assets/gambar/logo-brodo-new-active.png" alt="logo" style="width: 100px; height: 41px; display: block; background-position: 50%!important; background-size: 100px 33px!important;">
+            <img src="<?= base_url() ?>assets/gambar/logo-brodo-new-active.png" alt="logo" style="width: 100px; height: 41px; display: block; background-position: 50%!important; background-size: 100px 33px!important;">
         </a>
     </nav>
     <div style="width: 350px; background: white; margin: 80px auto; padding: 30px 20px; border-radius: 6px;">
