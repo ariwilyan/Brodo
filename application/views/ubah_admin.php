@@ -50,7 +50,7 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
-                        <input type="hidden" name="id" value="<?php echo $admin->ID_item ?>">
+                        <input type="hidden" name="id" value="<?php echo $admin->ID_admin ?>">
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $admin->Nama_admin ?>">
