@@ -17,9 +17,9 @@ class Item_model extends CI_Model {
         $que = $this->db->query("SELECT i.ID_item,i.Nama_item, i.Harga_item, i.Deskripsi_item, i.Foto, k.nama_sub_kategori,k.no_sub_kategori FROM item i JOIN sub_kategori k ON i.no_sub_kategori = k.no_sub_kategori WHERE ID_item = $id_item");
         return $que->result_array();
     }
-    public function findItemById($key)
+    public function findItemByKey($key)
     {
-        $que = $this->db->query("SELECT i.ID_item,i.Nama_item, i.Harga_item, i.Deskripsi_item, i.Foto, k.nama_sub_kategori,k.no_sub_kategori FROM item i JOIN sub_kategori k ON i.no_sub_kategori = k.no_sub_kategori WHERE i.Nama_item LIKE '%$key%' OR i.Harga_item LIKE '%$key%' OR i.Deskripsi_item LIKE '%$key%' OR k.nama_sub_kategori LIKE '%$key%' OR k.no_sub_kategori '%$key%'");
+        $que = $this->db->query("SELECT i.ID_item,i.Nama_item, i.Harga_item, i.Deskripsi_item, i.Foto, k.nama_sub_kategori,k.no_sub_kategori FROM item i JOIN sub_kategori k ON i.no_sub_kategori = k.no_sub_kategori WHERE i.Nama_item LIKE '%$key%' OR i.Harga_item LIKE '%$key%' OR i.Deskripsi_item LIKE '%$key%' OR k.nama_sub_kategori LIKE '%$key%'");
         return $que->result_array();
     }
 

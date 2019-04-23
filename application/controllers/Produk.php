@@ -13,6 +13,9 @@ class Produk extends CI_Controller {
     public function halaman_produk(){
         $data['title'] = "DAFTAR ITEM PRODUK";
         $data['item'] = $this->Item_model->getAllItem();
+        if ($this->input->post('keyword')) {
+            $data['item'] = $this->Item_model->findItemByKey($this->input->post('keyword'));
+        }
         $this->load->view('templates/header_admin',$data);
         $this->load->view('halaman_produk',$data);
         $this->load->view('templates/footer_admin');
