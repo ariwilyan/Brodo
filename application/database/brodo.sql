@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2019 at 11:35 AM
+-- Generation Time: Apr 23, 2019 at 03:30 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -59,7 +59,7 @@ CREATE TABLE `item` (
   `Nama_item` varchar(50) NOT NULL,
   `Harga_item` varchar(10) NOT NULL,
   `Deskripsi_item` varchar(100) DEFAULT NULL,
-  `Foto` text NOT NULL,
+  `Foto` varchar(1000) NOT NULL DEFAULT 'Default_item.png',
   `no_sub_kategori` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -79,7 +79,8 @@ INSERT INTO `item` (`ID_item`, `Nama_item`, `Harga_item`, `Deskripsi_item`, `Fot
 (33, 'Base Navy Gumsole', '399000', NULL, 'gambar9.jpg', 4),
 (34, 'Brunn Black White Sole', '495000', NULL, 'gambar10.jpg', 4),
 (35, 'Brunn Navy White Sole', '495000', NULL, 'gambar11.jpg', 4),
-(36, 'Brunn Full White WS', '495000', NULL, 'gambar12.jpg', 4);
+(36, 'Brunn Full White WS', '495000', NULL, 'gambar12.jpg', 4),
+(37, 'Baju Baru', '1000', NULL, 'Default_item.png', 1);
 
 -- --------------------------------------------------------
 
@@ -201,7 +202,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `ID_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `ID_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `kategori`
