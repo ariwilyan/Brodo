@@ -34,7 +34,7 @@ class Login extends CI_Controller {
     public function register()
     {
         $data['title'] = "daftar";
-        $this->load->view('templates/header');
+        $this->load->view('templates/header',$data);
         $this->load->view('halaman_register');
         $this->load->view('templates/footer');
     }
