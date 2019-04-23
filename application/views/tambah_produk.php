@@ -21,7 +21,7 @@
                     <span class="nav-link">|</span>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="<?= base_url("produk/halaman_produk") ?>">Produk</a>
+                    <a class="nav-link" href="<?php echo base_url("produk/halaman_produk"); ?>">Produk</a>
                 </li>
                 <li class="nav-item">
                     <span class="nav-link">|</span>
@@ -43,44 +43,53 @@
 
 <div class="container" style="margin-top:100px;">
     <div class="row mt-3">
-        <div class="col md-6">
+        <div class="col">
             <div class="card">
                 <div class="card-header text-center">
-                    Form Ubah Data Admin
+                    Form Tambah Data Produk
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
-                        <input type="hidden" name="id" value="<?php echo $item->ID_item ?>">
+                    <form action="<?php echo base_url('produk/tambah')?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $admin->Nama_admin ?>">
+                            <label for="nama_item">NAMA ITEM</label>
+                            <input type="text" class="form-control" id="nama" name="nama">
                             <small class="form-text text-danger"><?= form_error('nama') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" value="<?php echo $admin->Username ?>">
-                            <small class="form-text text-danger"><?= form_error('username') ?>.</small>
+                            <label for="harga">HARGA</label>
+                            <input type="text" class="form-control" id="harga" name="harga">
+                            <small class="form-text text-danger"><?= form_error('harga') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" value="<?php echo $admin->Password ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="text">DESKRIPSI</label>
+                            <textarea name="deskripsi" id="text" class="form-control"></textarea>
+                            <small class="form-text text-danger"><?= form_error('deskripsi') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="nohp">No HP</label>
-                            <input type="text" class="form-control" id="nohp" name="nohp" value="<?php echo $admin->No_hp ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="foto">FOTO</label>
+                            <input type="file" class="form-control" id="foto" name="foto">
+                            <small class="form-text text-danger"><?= form_error('foto') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $admin->Alamat ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="sub_kategori">SUB KATEGORI</label>
+                            <select name="subkategori" id="sub_kategori" class="form-control">
+                                <?php
+                                foreach ($sub_kategori as $data) {
+                                ?>
+                                <option value="<?= $data['no_sub_kategori'] ?>"><?= $data['nama_sub_kategori'] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                            <small class="form-text text-danger"><?= form_error('subkategori') ?>.</small>
                         </div>
-                        <button type="submit" name="ubah" class="btn btn-primary float-right">Ubah Data</button>
+                        <button href="<?php base_url(); ?>admin/index" type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
                     </form>
                 </div>
             </div>
 
         </div>
     </div>
-</div> 
+</div>
+
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>

@@ -13,5 +13,10 @@ class Sub_kategori_model extends CI_Model
         $que = $this->db->get('sub_kategori');
         return $que->result_array();
     }
+    public function getAllSubKategori()
+    {
+        $que = $this->db->get('sub_kategori');
+        return $que->result_array();
+    }
 }
 ?>

@@ -15,6 +15,9 @@
     <!--custom style-->
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/style.css">
 
+    <!-- datatable js -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/js/datatable/datatables.css">
+
     <!--open iconic-->
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/open-iconic-master/font/css/open-iconic-bootstrap.css">
 

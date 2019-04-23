@@ -111,3 +111,5 @@ class Admin_model extends CI_model
 		//return data admin that has been searched
 	}
 }
+
+?>

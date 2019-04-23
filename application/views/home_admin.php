@@ -19,7 +19,7 @@
             <span class="nav-link">|</span>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
+            <a class="nav-link" href="<?php echo base_url("produk/halaman_produk"); ?>">Produk</a>
         </li>
         <li class="nav-item">
             <span class="nav-link">|</span>

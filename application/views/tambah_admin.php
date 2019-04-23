@@ -21,7 +21,7 @@
                     <span class="nav-link">|</span>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">Produk</a>
+                    <a class="nav-link" href="<?= base_url("produk/halaman_produk") ?>">Produk</a>
                 </li>
                 <li class="nav-item">
                     <span class="nav-link">|</span>
@@ -56,7 +56,7 @@
                             <small class="form-text text-danger"><?= form_error('nama') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="nim">Username</label>
+                            <label for="username">Username</label>
                             <input type="text" class="form-control" id="username" name="username">
                             <small class="form-text text-danger"><?= form_error('username') ?>.</small>
                         </div>

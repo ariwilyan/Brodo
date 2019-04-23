@@ -46,38 +46,59 @@
         <div class="col md-6">
             <div class="card">
                 <div class="card-header text-center">
-                    Form Ubah Data Admin
+                    Form Ubah Data Produk
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
-                        <input type="hidden" name="id" value="<?php echo $item->ID_item ?>">
+                    <?php
+                    foreach ($item as $row) {
+                    ?>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?php echo $row["ID_item"] ?>">
+                        <input type="hidden" name="foto_lama" value="<?php echo $row["Foto"] ?>">
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $admin->Nama_admin ?>">
+                            <label for="nama">Nama Item</label>
+                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $row["Nama_item"] ?>">
                             <small class="form-text text-danger"><?= form_error('nama') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" value="<?php echo $admin->Username ?>">
-                            <small class="form-text text-danger"><?= form_error('username') ?>.</small>
+                            <label for="username">Harga</label>
+                            <input type="text" class="form-control" id="harga" name="harga" value="<?php echo $row["Harga_item"] ?>">
+                            <small class="form-text text-danger"><?= form_error('harga') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" value="<?php echo $admin->Password ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="text">Deskripsi</label>
+                            <textarea class="form-control" id="text" name="deskripsi"><?php echo $row["Deskripsi_item"] ?></textarea>
+                            <small class="form-text text-danger"><?= form_error('deskripsi') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="nohp">No HP</label>
-                            <input type="text" class="form-control" id="nohp" name="nohp" value="<?php echo $admin->No_hp ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="nohp">Foto</label>
+                            <input type="file" class="form-control" id="foto" name="foto" value="<?php echo $row["Foto"] ?>">
+                            <small class="form-text text-danger"><?= form_error('foto') ?>.</small>
                         </div>
                         <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $admin->Alamat ?>">
-                            <small class="form-text text-danger"><?= form_error('nohp') ?>.</small>
+                            <label for="sub_kategori">Sub Kategori</label>
+                            <select name="subkategori" id="sub_kategori" class="form-control">
+                                <?php
+                                foreach ($sub_kategori as $data) {
+                                    if ($data['no_sub_kategori']==$row["no_sub_kategori"]) {
+                                        ?>
+                                    <option value="<?= $data['no_sub_kategori'] ?>" selected><?= $data['nama_sub_kategori'] ?></option>
+                                <?php
+                                } else {
+                                    ?>
+                                    <option value="<?= $data['no_sub_kategori'] ?>"><?= $data['nama_sub_kategori'] ?></option>
+                                <?php
+                                }
+                            }
+                            ?>
+                            </select>
+                            <small class="form-text text-danger"><?= form_error('subkategori') ?>.</small>
                         </div>
                         <button type="submit" name="ubah" class="btn btn-primary float-right">Ubah Data</button>
                     </form>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
 
