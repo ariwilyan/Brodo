@@ -32,15 +32,15 @@
             <?php
             $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
             foreach ($sub as $data) {
-            ?>
-            <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
+              ?>
+              <a class="dropdown-item" href="<?php echo base_url(); ?>user/item/<?= $data['no_sub_kategori'] ?>"><?= $data['nama_sub_kategori'] ?></a>
             <?php
-            }
-            ?>
-          </div>
-          <?php
           }
           ?>
+          </div>
+        <?php
+          }
+        ?>
           </div>
         </div>
       </li>
@@ -157,21 +157,21 @@
     </div>
     <div class="row mt-2">
         <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid1.PNG" class="img-fluid"></a>
+            <img src="<?= base_url() ?>assets/gambar/grid1.PNG" class="img-fluid">
         </div>
         <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid2.PNG" class="img-fluid"></a>
+            <img src="<?= base_url() ?>assets/gambar/grid2.PNG" class="img-fluid">
         </div>
     </div>
     <div class="row mt-4">
         <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid3.PNG" class="img-fluid"></a>
+            <img src="<?= base_url() ?>assets/gambar/grid3.PNG" class="img-fluid">
         </div>
         <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid4.PNG" class="img-fluid"></a>
+            <img src="<?= base_url() ?>assets/gambar/grid4.PNG" class="img-fluid">
         </div>
         <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid5.PNG" class="img-fluid"></a>
+            <img src="<?= base_url() ?>assets/gambar/grid5.PNG" class="img-fluid">
         </div>
     </div>
 </html>

@@ -1,7 +1,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color:white; border-bottom: 1px solid gainsboro; padding: 5px;">
             <ul class="nav navbar">
-                <p><span class="glyphicon glyphicon-chevron-left"></span></p>
+                <a href="<?= base_url() ?>user" ><span class="oi oi-chevron-left"></span></a>
                 <a href="<?php echo base_url("user/index");?>" style="margin-left:500px;">
                     <img src="<?=base_url()?>assets/gambar/brodo1.png" alt="BRODO" width="110" height="30">
                 </a>
@@ -17,8 +17,19 @@
                     <a href="" class="btn btn-block btn-light active">Daftar</a>
                 </div>
             </div>
-            <div class="p-4">    
-                <form action="/action_page.php">
+            <div class="p-4">  
+                <?php 
+                    if ($this->session->flashdata('flashemail')){
+                ?>
+                <div class="alert alert-danger" role="alert">
+                <?php 
+                    echo $this->session->flashdata('flashemail');
+                ?>
+                </div> 
+                <?php 
+                }
+                ?> 
+                <form action="<?=base_url()?>login/register" method="POST">
                     <div class="form-group">
                             <select class="custom-select">
                                     <option value="Pilih Panggilan">Pilih Panggilan</option>

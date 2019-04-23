@@ -1,106 +1,153 @@
-<html>
-    <head>
-        <title>
-            BRODO - Koleksi Sneakers 
-        </title>
-        <link rel="icon" sizes="192x192" href="assets/brodo.png">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <style>
-                #box{
-                  width:35px;
-                  height:35px;
-                  background: white;
-                  border:solid 1px gainsboro;
-                  position: center;
-                }
-            </style>
-                     
-    </head>
-    <body style="background-color:whitesmoke;">
-        <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color:white; border-bottom: 1px solid gainsboro; padding: 5px;">
-            <ul class="nav">
-                <a href="#BRODO" style="margin-left:20px;">
-                    <img src="assets/brodo1.png" alt="BRODO" width="130" height="35">
-                </a>
-            </ul>
-            <ul class="nav navbar-nav" style="margin-left:200px;">
-                <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" href="#BRODO" style="color:black;">Koleksi<span class=""></span></a> 
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="nav-link"href="#">Best Seller</a></li>
-                        <li class="" style="border-bottom: 2px solid gainsboro;margin-left:10px;width: 135"><a class=""href="#"></a></li>
-                        <li class="dropdown-item"><a class="nav-link"href="#">Terbaru</a></li>
-                    </ul>
-                <li class="navbar h5">|</li>
-                </li>
-                <li class="nav-item dropdown-content"><a class="nav-link" data-toggle="dropdown" href="#BRODO" style="color:black; margin-left: 10px; margin-right: 10px;">Kategori<span class=""></span></a>
-                    <ul class="dropdown-menu multi-column columns-3" style="min-width: 2000px;">
-                        </button>
-                      <div class="row">
-                            <ul class="multi-column-dropdown">
-                                <li class="dropdown-header"><a class="nav-link"href="#" style="margin-left: 10px; color:black;">Sandals</a></li>
-                            </ul>
-                            <ul class="multi-column-dropdown">
-                                <li class="dropdown-header"><a class="nav-link"href="#" style="color:black;border-bottom: 2px solid gainsboro;width: 160">Aksesoris</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#" style="border-bottom: 2px solid gainsboro;width: 160">All</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#">Grooming</a></li>
-                            </ul>
-                            <ul class="multi-column-dropdown">
-                                <li class="dropdown-header"><a class="nav-link"href="#" style="color:black;border-bottom: 2px solid gainsboro;width: 160">Inspirasi</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#" style="border-bottom: 2px solid gainsboro;width: 160">Outfit Kerja</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#">Outfit Travel</a></li>
-                            </ul>
-                            <ul class="multi-column-dropdown">
-                                <li class="dropdown-header"><a class="nav-link"href="#" style="color:black;border-bottom: 2px solid gainsboro;width: 160">Shoes</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#"style="border-bottom: 2px solid gainsboro;width: 160">Signature Collections</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#"style="border-bottom: 2px solid gainsboro;width: 160">Sneakers</a></li>
-                                <li class="dropdown-item"><a class="nav-link"href="#">Boots</a></li>
-                            </ul>
-                            <ul class="multi-column-dropdown">
-                                    <li class="dropdown-header"><a class="nav-link"href="#" style="color:black;border-bottom: 2px solid gainsboro;width: 160">Pakaian</a></li>
-                                    <li class="dropdown-item"><a class="nav-link"href="#"style="border-bottom: 2px solid gainsboro;width: 160">Bawahan</a></li>
-                                    <li class="dropdown-item"><a class="nav-link"href="#">Atasan</a></li>
-                            </ul>
-                            
-                       </div>
-                       
-                    </ul>
-                    <li class="navbar h5">|</li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#BRODO" style="color:black; margin-left: 10px; margin-right: 10px;">Jurnal<span class=""></span></a></li>
-                    <li class="navbar h5">|</li>
-                    <li class="nav-item dropdown"><a class="nav-link "  href="#BRODO" style="color:black; margin-left: 10px; margin-right: 10px;">Tentang Kami<span class=""></span></a></li>
-                    <li class="navbar h5">|</li>
-                    <li class="nav-item dropdown"><a class="nav-link "  href="#BRODO" style="color:black; margin-left: 10px; margin-right: 10px;">Toko Kami<span class=""></span></a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-nav fixed-top">
+  <a class="navbar-brand" href="<?= base_url() ?>user"><img src="<?= base_url() ?>assets/gambar/brodo1.png" class="img-brand"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-                </li>
-            </ul>
-            <ul class="nav navbar-right">
-                <li style="margin-left:95px;">
-                    <img src="assets/search.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
-                    <img src="assets/user.png" alt="BRODO" width="25" height="25" style="margin-left:30px;" >
-                    <img src="assets/cart.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
-                </li>
-            </ul> 
-        </nav>
-        <div class="container" style="margin-top:80px; border-bottom: 1px solid gainsboro; padding: 5px;">
-            <a><h5>SNEAKERS</h5></a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav m-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">koleksi</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><b>All</b></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Terbaru</b></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><b>Best Seller</b></a>
         </div>
-        <div class="container">
-            <p style="font-size:15px; margin-top:20px;">Menampilkan 12 produk (12 dari 34)</p>
-                <div id="box">
-                    <i class="material-icons">&#xe241;</i>
+      </li>
+      <li class="nav-item">
+          <span class="nav-link">|</span>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">kategori</a>
+        <div class="dropdown-menu dropdown-kategori" aria-labelledby="navbarDropdown1">
+          <div class="row">
+          <?php
+          foreach ($kategori as $row) {
+          ?>
+          <div class="float-left mr-3">
+            <span class="dropdown-item"><b><?= $row['nama_kategori'] ?></b></span>
+            <div class="dropdown-divider"></div>
+            <?php
+            $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
+            foreach ($sub as $data) {
+              ?>
+              <a class="dropdown-item" href="<?php echo base_url(); ?>user/item/<?= $data['no_sub_kategori'] ?>"><?= $data['nama_sub_kategori'] ?></a>
+            <?php
+          }
+          ?>
+          </div>
+        <?php
+          }
+        ?>
+          </div>
+        </div>
+      </li>
+        <li class="nav-item">
+          <span class="nav-link">|</span>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">jurnal</a>
+      </li>
+      <li class="nav-item">
+          <span class="nav-link">|</span>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">tentang kami</a>
+      </li>
+      <li class="nav-item">
+          <span class="nav-link">|</span>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">toko kami</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    <ul class="navbar-nav">
+        <li class="navbar-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-dark"><span class="oi oi-person"></span></span></a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-login" aria-labelledby="navbarDropdown2">
+            <?php
+            if ($this->session->has_userdata('login')) {
+            ?>
+            <a class="dropdown-item" href="#"><b>Pengguna</b></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Halaman Pengguna</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Riwayat Pesanan</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Daftar Alamat</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Halaman Profil</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><b>Lacak</b></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Lacak Pengiriman</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Pengembalian & Penukaran</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="<?= base_url() ?>user/logout"><b>Keluar</b></a>
+            <?php
+            } else {
+            ?>
+            <h3 class="p-3"><span class="oi oi-person"></span> Masuk Ke Akun</h3>
+            <form action="<?= base_url() ?>login/log_in" method="POST" class="px-4 py-3">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email bro/sis" name="email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Kata Sandi" name="password">
+              </div>
+              <button type="submit" class="btn w-100 btn-ijo">MASUK</button>
+            </form>
+            <a href="#" class="text-secondary text-right dropdown-item lupa-sandi badge p-3">Lupa kata sandi?</a>
+            <hr>
+            <div class="p-3">
+              <button class="btn btn-primary w-100">MASUK DENGAN FACEBOOK</button><br>
+              <button class="btn btn-danger w-100 mt-2">MASUK DENGAN GOOGLE</button>
+            </div>
+            <div class="bg-gainsboro p-3 mt-4 text-center">
+              <span>Belum punya akun?</span> <br>
+              <a href="<?= base_url() ?>login" class="text-dark"><h6>Buat akun Brothers sekarang</h6></a>
+            </div>
+            <?php
+            }
+            ?>
+          </div>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="nav-link"><span class="text-dark"><span class="oi oi-cart"></span></span></a>
+        </li>
+    </ul>
+    
+    
+
+  </div>
+</nav>
+
+    <div class="container" style="margin-top:80px; border-bottom: 1px solid gainsboro; padding: 5px;">
+        <a><h5><?php foreach($sub_kategori as $data){ echo $data['nama_sub_kategori']; } ?></h5></a>
+        <div class="row">
+            <?php
+            foreach($item as $i){
+                ?>
+                <div class = "col-md-4 mt-2">
+                    <a href="<?= base_url() ?>user/lihat_item/<?= $i['ID_item'] ?>" class="item-card">
+                        <div class="card" style="width: 100%;">
+                            <img src="<?php echo base_url('assets/gambar/'.$i['Foto']) ?>" class="card-img-top" alt="produk">
+                            <div class="card-body">
+                                <p class="card-text text-dark"><b><?= $i['Nama_item'] ?></b></p>
+                                <hr>
+                                <span class="text-oren">Rp. <?= $i['Harga_item'] ?></span>
+                            </div>
+                        </div>    
+                    </a>
                 </div>
+            <?php
+            }
+            ?>
         </div>
-        
-        
-        
-        
-
-                
-        
-    </body>
-</html>
+    </div>

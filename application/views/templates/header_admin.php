@@ -15,11 +15,16 @@
     <!--custom style-->
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/style.css">
 
+    <!-- datatable js -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/js/datatable/datatables.css">
+
     <!--open iconic-->
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/open-iconic-master/font/css/open-iconic-bootstrap.css">
 
     <!-- icon title web -->
     <link rel="icon" type="image/png" href="<?php echo base_url("assets/gambar/brodo.png");?>">
+
+    
     
     <style type="text/css">
         input[type=submit]{

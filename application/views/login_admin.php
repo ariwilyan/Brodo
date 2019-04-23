@@ -9,7 +9,7 @@
         <h2 style="text-align: center; font-style: bold;">BRODO</h4>
         <h5 style="text-align: center; margin-bottom: 20px;">Login Form - Admin</h5>
 
-        <form>
+        <form action="<?php echo base_url("admin/login_admin"); ?>" method="POST">
             <div class="form-group">
                 <label>Username</label><br/>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required><br/>
@@ -22,7 +22,7 @@
                 <br/>
                 <br/>
                 <center>
-                    <a style="color: #232323; text-decoration: none; font-size: 10pt;" href="<?php echo base_url("login/index");?>">kembali ke Customer</a>
+                    <a style="color: #232323; text-decoration: none; font-size: 10pt;" href="<?php echo base_url("user");?>">kembali ke Customer</a>
                 </center>
             </div>
         </form>

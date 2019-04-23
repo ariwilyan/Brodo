@@ -19,5 +19,5 @@
     <!-- icon title web -->
     <link rel="icon" type="image/png" href="<?php echo base_url("assets/gambar/brodo.png");?>">
 </head>
-<body>
+<body style="background-color:whitesmoke;">
     
