@@ -17,48 +17,48 @@
         </div>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">kategori</a>
         <div class="dropdown-menu dropdown-kategori" aria-labelledby="navbarDropdown1">
           <div class="row">
-          <?php
-          foreach ($kategori as $row) {
-          ?>
-          <div class="float-left mr-3">
-            <span class="dropdown-item"><b><?= $row['nama_kategori'] ?></b></span>
-            <div class="dropdown-divider"></div>
             <?php
-            $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
-            foreach ($sub as $data) {
-            ?>
-            <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
-            <?php
+            foreach ($kategori as $row) {
+              ?>
+              <div class="float-left mr-3">
+                <span class="dropdown-item"><b><?= $row['nama_kategori'] ?></b></span>
+                <div class="dropdown-divider"></div>
+                <?php
+                $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
+                foreach ($sub as $data) {
+                  ?>
+                  <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
+                  <?php
+                }
+                ?>
+              </div>
+              <?php
             }
             ?>
           </div>
-          <?php
-          }
-          ?>
-          </div>
         </div>
       </li>
-        <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+      <li class="nav-item">
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">jurnal</a>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">tentang kami</a>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">toko kami</a>
       </li>
@@ -67,11 +67,11 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </form>
     <ul class="navbar-nav">
-        <li class="navbar-item dropdown">
-          <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-dark"><span class="oi oi-person"></span></span></a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-login" aria-labelledby="navbarDropdown2">
-            <?php
-            if ($this->session->has_userdata('login')) {
+      <li class="navbar-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-dark"><span class="oi oi-person"></span></span></a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-login" aria-labelledby="navbarDropdown2">
+          <?php
+          if ($this->session->has_userdata('login')) {
             ?>
             <a class="dropdown-item" href="#"><b>Pengguna</b></a>
             <div class="dropdown-divider"></div>
@@ -91,7 +91,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="<?= base_url() ?>user/logout"><b>Keluar</b></a>
             <?php
-            } else {
+          } else {
             ?>
             <h3 class="p-3"><span class="oi oi-person"></span> Masuk Ke Akun</h3>
             <form action="<?= base_url() ?>login/log_in" method="POST" class="px-4 py-3">
@@ -114,64 +114,59 @@
               <a href="<?= base_url() ?>login" class="text-dark"><h6>Buat akun Brothers sekarang</h6></a>
             </div>
             <?php
-            }
-            ?>
-          </div>
-        </li>
-        <li class="navbar-item">
-          <a href="#" class="nav-link"><span class="text-dark"><span class="oi oi-cart"></span></span></a>
-        </li>
+          }
+          ?>
+        </div>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-link"><span class="text-dark"><span class="oi oi-cart"></span></span></a>
+      </li>
     </ul>
-    
-    
-
   </div>
 </nav>
 
-<div class="container-fluid mt-3">
-    <div class="row">
-        <div class="col-12">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
+<div class="container-fluid px-5 pt-5 mt-5">
+  <div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <h5><b>Keranjang</b></h5>
+      <div class="row">
+        <div class="col-3">
+          <img src="<?= base_url() ?>assets/gambar/produk/1.jpg" width="80px" height="80px">
+        </div>
+        <div class="col-9 text-left">
+          <p><b>Generic Play Grey 41 41 WS</b></p>
+          <p>Rp 495.000</p>
+          <div class="row">
+            <div class="col-6">            
+              <form class="form-inline">
+                <div class="form-group">
+                  <button class="btn btn-light" style="background-color: white;">-</button>
+                  <input type="text" name="" value="1" style="width: 30px;">
+                  <button class="btn btn-light" style="background-color: white;">+</button>
                 </div>
-                <div class="carousel-item">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+              </form>
+            </div>    
+            <div class="col-6 text-right" style="color: #FF0000;">
+              <p><small>HAPUS</small></p>
+            </div>   
+          </div>
         </div>
+      </div>
+      <hr>
+      <div class="row border border-dark pt-3 my-3">
+        <div class="col-6 text-left">
+          <p><small><b>Total Biaya</b></small></p>
+        </div>
+        <div class="col-6 text-right">
+          <p><small><b>Rp 495.000</b></small></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="btn-group" role="group" style="width: 100%">
+          <a class="btn btn-dark rounded-0 border-0" href="<?= base_url('Beli'); ?>" style="background-color: #6B6F6D">BELANJA LAGI</a>
+          <a class="btn btn-dark rounded-0 border-0" href="<?= base_url('Checkout'); ?>" style="background-color: #0B3F57">SIKAT BRO</a>
+        </div>
+      </div>
     </div>
-    <div class="row mt-2">
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid1.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid2.PNG" class="img-fluid"></a>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid3.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid4.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid5.PNG" class="img-fluid"></a>
-        </div>
-    </div>
-</html>
+  </div>
+  </html>

@@ -128,50 +128,158 @@
   </div>
 </nav>
 
-<div class="container-fluid mt-3">
-    <div class="row">
-        <div class="col-12">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
+<div class="container-fluid mt-3 px-5" style="background-color: #F8F8F8;">
+  <div class="row pt-5 mt-5">
+    <div class="col-12">
+      <h5>"KENT"</h5>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      <p>Menampilkan 6 produk <b>kent</b> (<b>6</b> dari <b>6</b>)</p>
+    </div>
+    <div class="col-6">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group">
+          <button class="btn btn-light border rounded-0" style="width: 46.5px; height: 40px;">.</button>
+          <button class="btn btn-light border rounded-0" style="width: 46.5px; height: 40px;">.</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <form class="form-inline float-right">
+        <select class="custom-select mx-4">
+          <option selected>Urutkan</option>
+          <option value="">Produk Terbaru</option>
+          <option value="">Produk Terlama</option>
+          <option value="">Nama (A-Z)</option>
+          <option value="">Nama (Z-A)</option>
+        </select>
+        <div class="input-group">
+              <select class="input-group-prepend custom-select">
+                <option selected>Filter Berdasarkan</option>
+              </select>
+              <div class="input-group-append input-group-text" style="background-color: #0B3F57; color: white;">V</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr>
+    <div class="row my-4">
+        <div class="col-4">
+              <div class="wrapper border">
+                <div class="row">
+                  <div class="col-12">
+                      <a href="<?= base_url('Produk'); ?>"><img src="<?= base_url() ?>assets/gambar/produk/1.jpg" class="img-fluid"></a>
+                  </div>
                 </div>
-                <div class="carousel-item">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
-                </div>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p class="mb-0 mt-3">Generic Play Grey WS</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p style="color: #F57224;">Rp 495.000</p>
+                    </div>
+                  </div>
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
-        </div>
+        <div class="col-4">
+              <div class="wrapper border">
+                <div class="row">
+                  <div class="col-12">
+                      <a href="<?= base_url('Produk'); ?>"><img src="<?= base_url() ?>assets/gambar/produk/2.jpg" class="img-fluid"></a>
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p class="mb-0 mt-3">Generic Play Grey WS</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p style="color: #F57224;">Rp 495.000</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        <div class="col-4">
+              <div class="wrapper border">
+                <div class="row">
+                  <div class="col-12">
+                      <a href="<?= base_url('Produk'); ?>"><img src="<?= base_url() ?>assets/gambar/produk/3.jpg" class="img-fluid"></a>
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p class="mb-0 mt-3">Generic Play Mustard WS</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p style="color: #F57224;">Rp 495.000</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
     </div>
-    <div class="row mt-2">
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid1.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid2.PNG" class="img-fluid"></a>
-        </div>
+    <div class="row my-4">
+        <div class="col-4">
+              <div class="wrapper border">
+                <div class="row">
+                  <div class="col-12">
+                      <a href="<?= base_url('Produk'); ?>"><img src="<?= base_url() ?>assets/gambar/produk/4.jpg" class="img-fluid"></a>
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p class="mb-0 mt-3">Generic Play Navy White Sole</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p style="color: #F57224;">Rp 495.000</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        <div class="col-4">
+              <div class="wrapper border">
+                <div class="row">
+                  <div class="col-12">
+                      <a href="<?= base_url('Produk'); ?>"><img src="<?= base_url() ?>assets/gambar/produk/5.jpg" class="img-fluid"></a>
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p class="mb-0 mt-3">Generic Play Black WS</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-12 mx-2">
+                      <p style="color: #F57224;">Rp 495.000</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid3.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid4.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid5.PNG" class="img-fluid"></a>
-        </div>
+    <div class="row my-4">
+      <div class="col text-center">
+    <button class="btn btn-dark rounded-0" style="background-color: #0B3F57">1</button>
+        
+      </div>
+    </div>
+    <hr class="bg-dark">
+    <div class="row my-4">
+      <div class="col text-center">
+        <p>Gak bosan pakai sepatu yang itu – itu aja? <a href="#" style="color: black; font-size: 14px;"><b>Lihat Selengkapnya...</b></a></p>
+      </div>
     </div>
 </html>

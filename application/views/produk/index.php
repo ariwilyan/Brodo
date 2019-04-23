@@ -17,48 +17,48 @@
         </div>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">kategori</a>
         <div class="dropdown-menu dropdown-kategori" aria-labelledby="navbarDropdown1">
           <div class="row">
-          <?php
-          foreach ($kategori as $row) {
-          ?>
-          <div class="float-left mr-3">
-            <span class="dropdown-item"><b><?= $row['nama_kategori'] ?></b></span>
-            <div class="dropdown-divider"></div>
             <?php
-            $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
-            foreach ($sub as $data) {
-            ?>
-            <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
-            <?php
+            foreach ($kategori as $row) {
+              ?>
+              <div class="float-left mr-3">
+                <span class="dropdown-item"><b><?= $row['nama_kategori'] ?></b></span>
+                <div class="dropdown-divider"></div>
+                <?php
+                $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
+                foreach ($sub as $data) {
+                  ?>
+                  <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
+                  <?php
+                }
+                ?>
+              </div>
+              <?php
             }
             ?>
           </div>
-          <?php
-          }
-          ?>
-          </div>
         </div>
       </li>
-        <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+      <li class="nav-item">
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">jurnal</a>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">tentang kami</a>
       </li>
       <li class="nav-item">
-          <span class="nav-link">|</span>
-        </li>
+        <span class="nav-link">|</span>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">toko kami</a>
       </li>
@@ -67,11 +67,11 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </form>
     <ul class="navbar-nav">
-        <li class="navbar-item dropdown">
-          <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-dark"><span class="oi oi-person"></span></span></a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-login" aria-labelledby="navbarDropdown2">
-            <?php
-            if ($this->session->has_userdata('login')) {
+      <li class="navbar-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-dark"><span class="oi oi-person"></span></span></a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-login" aria-labelledby="navbarDropdown2">
+          <?php
+          if ($this->session->has_userdata('login')) {
             ?>
             <a class="dropdown-item" href="#"><b>Pengguna</b></a>
             <div class="dropdown-divider"></div>
@@ -91,7 +91,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="<?= base_url() ?>user/logout"><b>Keluar</b></a>
             <?php
-            } else {
+          } else {
             ?>
             <h3 class="p-3"><span class="oi oi-person"></span> Masuk Ke Akun</h3>
             <form action="<?= base_url() ?>login/log_in" method="POST" class="px-4 py-3">
@@ -114,64 +114,43 @@
               <a href="<?= base_url() ?>login" class="text-dark"><h6>Buat akun Brothers sekarang</h6></a>
             </div>
             <?php
-            }
-            ?>
-          </div>
-        </li>
-        <li class="navbar-item">
-          <a href="#" class="nav-link"><span class="text-dark"><span class="oi oi-cart"></span></span></a>
-        </li>
+          }
+          ?>
+        </div>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="nav-link"><span class="text-dark"><span class="oi oi-cart"></span></span></a>
+      </li>
     </ul>
-    
-    
-
   </div>
 </nav>
 
-<div class="container-fluid mt-3">
-    <div class="row">
-        <div class="col-12">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
-                </div>
-                <div class="carousel-item">
-                  <a href=""><img src="<?= base_url() ?>assets/gambar/banner.png" class="d-block w-100"></a>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </div>
+<div class="container-fluid px-5 pt-5 mt-5" style="background-color: #E4E4E4;">
+  <div class="row">
+    <div class="col-1">
+      
     </div>
-    <div class="row mt-2">
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid1.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-6">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid2.PNG" class="img-fluid"></a>
-        </div>
+    <div class="col-6">
+      <img src="<?= base_url() ?>assets/gambar/produk/1.jpg" width="500px" height="400px">
     </div>
-    <div class="row mt-4">
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid3.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid4.PNG" class="img-fluid"></a>
-        </div>
-        <div class="col-4">
-            <a href="<?= base_url('Beli'); ?>"><img src="<?= base_url() ?>assets/gambar/grid5.PNG" class="img-fluid"></a>
-        </div>
+    <div class="col-5">
+      <h3><b>Generic Play Grey WS</b></h3>
+      <p>Rp 495.000</p>
+      <select class="custom-select border-dark">
+        <option selected>PILIH UKURAN</option>
+        <option value="">39(1)</option>
+        <option value="">40(1)</option>
+        <option value="">41(1)</option>
+      </select>
+      <a class="btn my-2" href="<?= base_url('Cart'); ?>" style="width: 100%; background-color: #0B3F57; color: #FFFFFF; border-color: #0B3F57">TAMBAH KE KERANJANG</a>
+      <h5>Perkiraan Ongkos Kirim</h5>
+      <form>
+        <input class="form-control rounded" type="text" name="alamat" placeholder="Ketikan nama Kota atau Kecamatan ..." style="width: 100%;">
+      </form>
+      <h5><b>Deskripsi</b></h5>
+      <h5>Produk</h5>
+      <p style="font-size: 14px;">Untuk Bro yang super-aktif dalam kegiatan sehari - hari, pastikan tampilan Bro tetap keren dari kepala hingga ke kaki, dari pagi hingga ke sore hari. Aktif dan pastikan kaki Brothers tetap terjaga kenyamanannya - Sepatu hybrid formal-kasual super ringan ini lah Jagonya, Generic Play dengan berbagai varian warna yang autentik!<br>Upper: High Performance PU Suede Leather<br>Lining : Elastane Fabric<br>Insole: E+<br>Sole: TPR Outsole<br>Construction: High Pressure Cementing & Side Stitch<br>Lace Loop on Tongue<br>Brodo Debossed Logo<br>Sizing sepatu ini UP-SIZE*<br>*Jika Brothers biasanya menggunakan Size 44, pada sepatu ini Brothers cukup menggunakan ukuran sepatu Size 43</p>
     </div>
+  </div>
+</div>
 </html>
