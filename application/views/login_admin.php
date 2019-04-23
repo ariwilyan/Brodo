@@ -22,7 +22,7 @@
                 <br/>
                 <br/>
                 <center>
-                    <a style="color: #232323; text-decoration: none; font-size: 10pt;" href="<?php echo base_url("login/index");?>">kembali ke Customer</a>
+                    <a style="color: #232323; text-decoration: none; font-size: 10pt;" href="<?php echo base_url("user");?>">kembali ke Customer</a>
                 </center>
             </div>
         </form>
