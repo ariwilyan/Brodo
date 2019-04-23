@@ -23,6 +23,6 @@ class User extends CI_Controller {
 	{
 		$this->session->unset_userdata('login');
 		$this->session->sess_destroy();
-		redirect("user");
+		redirect("login/index");
 	}
 }

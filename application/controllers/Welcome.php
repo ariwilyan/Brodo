@@ -22,8 +22,4 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-
-	public function landing_brodo(){
-		$this->load->view('login_admin');
-	}
 }
