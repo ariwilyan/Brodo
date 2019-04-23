@@ -13,7 +13,7 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = "halaman utama";
+		$data['title'] = "BRODO";
 		$data['kategori'] = $this->kategori_model->getAllKategori();
 		$this->load->view('templates/header',$data);
 		$this->load->view('halaman_utama',$data);
