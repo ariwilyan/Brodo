@@ -1,7 +1,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color:white; border-bottom: 1px solid gainsboro; padding: 5px;">
             <ul class="nav navbar">
-                <p><span class="glyphicon glyphicon-chevron-left"></span></p>
+                <a href="<?= base_url() ?>user" ><span class="oi oi-chevron-left"></span></a>
                 <a href="<?php echo base_url("user/index");?>" style="margin-left:500px;">
                     <img src="<?=base_url()?>assets/gambar/brodo1.png" alt="BRODO" width="110" height="30">
                 </a>

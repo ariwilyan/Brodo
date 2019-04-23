@@ -1,5 +1,5 @@
     <footer>
-        <div class="container-fluid pt-5 pb-5">
+        <div class="container-fluid pt-5 pb-5" style="margin-top: 100px;">
             <div class="row">
                 <div class="col-2">
                     <img src="<?= base_url() ?>assets/gambar/brodocoklat.png" alt="">

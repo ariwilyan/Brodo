@@ -32,15 +32,15 @@
             <?php
             $sub = $this->sub_kategori_model->getSubKategoriByKategori($row['no_kategori']);
             foreach ($sub as $data) {
-            ?>
-            <a class="dropdown-item" href="#"><?= $data['nama_sub_kategori'] ?></a>
+              ?>
+              <a class="dropdown-item" href="<?php echo base_url(); ?>user/item/<?= $data['no_sub_kategori'] ?>"><?= $data['nama_sub_kategori'] ?></a>
             <?php
-            }
-            ?>
-          </div>
-          <?php
           }
           ?>
+          </div>
+        <?php
+          }
+        ?>
           </div>
         </div>
       </li>
