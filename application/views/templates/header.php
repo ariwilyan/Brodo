@@ -17,5 +17,5 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/open-iconic-master/font/css/open-iconic-bootstrap.css">
 
 </head>
-<body>
+<body style="background-color:whitesmoke;">
     

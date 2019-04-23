@@ -1,27 +1,4 @@
-<html>
-    <head>
-        <title>
-            BRODO - Koleksi Sneakers 
-        </title>
-        <link rel="icon" sizes="192x192" href="assets/brodo.png">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <style>
-                #box{
-                  width:35px;
-                  height:35px;
-                  background: white;
-                  border:solid 1px gainsboro;
-                  position: center;
-                }
-            </style>
-                     
-    </head>
-    <body style="background-color:whitesmoke;">
+
         <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color:white; border-bottom: 1px solid gainsboro; padding: 5px;">
             <ul class="nav">
                 <a href="#BRODO" style="margin-left:20px;">
@@ -80,27 +57,17 @@
             </ul>
             <ul class="nav navbar-right">
                 <li style="margin-left:95px;">
-                    <img src="assets/search.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
-                    <img src="assets/user.png" alt="BRODO" width="25" height="25" style="margin-left:30px;" >
-                    <img src="assets/cart.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
+                    <img src="<?=base_url()?>assets/gambar/search.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
+                    <img src="<?=base_url()?>assets/gambar/user.png" alt="BRODO" width="25" height="25" style="margin-left:30px;" >
+                    <img src="<?=base_url()?>assets/gambar/cart.png" alt="BRODO" width="25" height="25" style="margin-left:30px;">
                 </li>
             </ul> 
         </nav>
         <div class="container" style="margin-top:80px; border-bottom: 1px solid gainsboro; padding: 5px;">
             <a><h5>SNEAKERS</h5></a>
         </div>
-        <div class="container">
-            <p style="font-size:15px; margin-top:20px;">Menampilkan 12 produk (12 dari 34)</p>
-                <div id="box">
-                    <i class="material-icons">&#xe241;</i>
-                </div>
-        </div>
         
         
         
         
 
-                
-        
-    </body>
-</html>

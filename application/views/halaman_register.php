@@ -17,8 +17,19 @@
                     <a href="" class="btn btn-block btn-light active">Daftar</a>
                 </div>
             </div>
-            <div class="p-4">    
-                <form action="/action_page.php">
+            <div class="p-4">  
+                <?php 
+                    if ($this->session->flashdata('flashemail')){
+                ?>
+                <div class="alert alert-danger" role="alert">
+                <?php 
+                    echo $this->session->flashdata('flashemail');
+                ?>
+                </div> 
+                <?php 
+                }
+                ?> 
+                <form action="<?=base_url()?>login/register" method="POST">
                     <div class="form-group">
                             <select class="custom-select">
                                     <option value="Pilih Panggilan">Pilih Panggilan</option>

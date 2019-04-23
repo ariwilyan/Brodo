@@ -5,7 +5,8 @@ class Login extends CI_Controller {
     {
 		parent::__construct();
 		$this->load->helper('url_helper');
-		$this->load->model('User_model');
+        $this->load->model('User_model');
+        $this->load->library('form_validation');
     }
 
     public function index()
@@ -33,10 +34,28 @@ class Login extends CI_Controller {
     
     public function register()
     {
-        $data['title'] = "daftar";
-        $this->load->view('templates/header');
-        $this->load->view('halaman_register');
-        $this->load->view('templates/footer');
+        $this->form_validation->set_rules('Nama_user','Nama Lengkap Brothers', 'required');
+        $this->form_validation->set_rules('email','Email Brothers', 'required');
+        $this->form_validation->set_rules('password','Kata Sandi', 'required');
+        if ($this->form_validation->run() == FALSE){
+            $data['title'] = "register";
+            $this->load->view('templates/header',$data);
+            $this->load->view('halaman_register');
+            $this->load->view('templates/footer');
+        }else{
+            $e = $this->User_model->cekEmail($this->input->post('email', true));
+            if($e > 0){
+                $this->session->set_flashdata('flashemail', 'Email sudah terdaftar, silakan login');
+                redirect('login/register');
+            }
+            $login = [
+                "email" => $this->input->post('email', true),
+                "Password" => $this->input->post('password', true),
+            ];
+            $this->session->set_userdata('login', $login);
+            $this->User_model->tambahUser();
+            redirect('user');
+        }
     }
 
     
