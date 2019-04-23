@@ -25,11 +25,11 @@ class Admin extends CI_Controller {
         $this->load->view('templates/footer_admin');
 		}
 
-		public function beranda_admin(){
+		public function landing_admin(){
 			$data['title'] = "BRODO - Beranda Admin";
 			$this->load->view('templates/header_admin',$data);
-			$this->load->view('beranda_admin');
-			$this->load->view('templates/footer_admin');
+			$this->load->view('home_admin');
+			$this->load->view('templates/footer');
 	}
 
 	// public function logout()
