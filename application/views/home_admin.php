@@ -7,13 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="<?php echo base_url("admin/landing_home"); ?>">Home</a>
         </li>
         <li class="nav-item">
           <span class="nav-link">|</span>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customer</a>
+            <a class="nav-link" href="<?php echo base_url("admin/index"); ?>">Admin</a>
         </li>
         <li class="nav-item">
             <span class="nav-link">|</span>
@@ -33,13 +33,13 @@
     </form>
     <ul class="navbar-nav">
         <li class="navbar-item dropdown">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="<?php echo base_url("admin/logout"); ?>">Logout</a>
         </li>  
     </ul>
   </div>
 </nav>
 <div class="container ">
     <br><br><br><br>
-    <h1>Selamat datang Admin . . .</h1>
+    <h1>Selamat datang <?= $this->session->login["Username"] ?> . . .</h1>
     <br><br><br><br><br><br><br><br><br><br>
 </div> 

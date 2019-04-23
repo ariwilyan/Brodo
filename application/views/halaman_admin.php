@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top:100px;">
     <?php if ($this->session->flashdata('success')) : ?>
     <div class="row mt-3">
         <div class="col-md-6">
@@ -12,6 +12,46 @@
     </div>
     <?php endif; ?>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav fixed-top">
+        <a class="navbar-brand" href="<?= base_url() ?>user"><img src="<?= base_url() ?>assets/gambar/brodo1.png" class="img-brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url("admin/landing_home"); ?>">Home</a>
+                </li>
+                <li class="nav-item">
+                <span class="nav-link">|</span>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="<?php echo base_url("admin/index"); ?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link">|</span>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link">|</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <ul class="navbar-nav">
+                <li class="navbar-item dropdown">
+                    <a class="nav-link" href="<?php echo base_url("admin/logout"); ?>">Logout</a>
+                </li>  
+            </ul>
+        </div>
+    </nav>
 
     <div class="row mt-3">
         <div class="col md-6">
@@ -28,8 +68,8 @@
 
     <div class="row mt-5">
         <div class="col">
-            <h3 class="text-center">Daftar USER</h3>
-            <?php if (empty($mahasiswa)) : ?>
+            <h3 class="text-center">Daftar ADMIN</h3>
+            <?php if (empty($admin)) : ?>
             <div class="alert alert-danger" role="alert">
                 Data tidak ditemukan
             </div>
@@ -38,22 +78,23 @@
             <table class="table mt-5">
                 <thead>
                     <tr>
-                        <th class="text-center" scope="col">NAMA USER</th>
-                        <th class="text-center" scope="col">EMAIL</th>
-                        <th class="text-center" scope="col">ALAMAT</th>
+                        <th class="text-center" scope="col">NAMA ADMIN</th>
+                        <th class="text-center" scope="col">USERNAME</th>
                         <th class="text-center" scope="col">NO HP</th>
+                        <th class="text-center" scope="col">ALAMAT</th>
                         <th class="text-center" scope="col">AKSI</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($mahasiswa as $mhs) : ?>
-                        <td class="text-center"><?= $mhs['nama']; ?></td>
-                        <td class="text-center"><?= $mhs['nim']; ?></td>
-                        <td class="text-center"><?= $mhs['email']; ?></td>
-                        <td class="text-center"><?= $mhs['jurusan']; ?></td>
+                    <?php foreach ($admin as $adm) : ?>
+                    <tr>
+                        <td class="text-center"><?= $adm['Nama_admin']; ?></td>
+                        <td class="text-center"><?= $adm['Username']; ?></td>
+                        <td class="text-center"><?= $adm['No_hp']; ?></td>
+                        <td class="text-center"><?= $adm['Alamat']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
-                            <a href="<?= base_url(); ?>mahasiswa/ubah/<?= $mhs['id'] ?>" class="badge badge-success float-center" ?>ubah</a>
+                            <a href="<?= base_url(); ?>admin/hapus/<?= $adm['ID_admin'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>admin/ubah/<?= $adm['ID_admin'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>
@@ -61,10 +102,10 @@
             </table>
             <div class="row mt-3">
                 <div class="col md-6 text-center mt-5">
-                    <a href="<?= base_url(); ?>Mahasiswa/tambah " class="btn btn-primary">Tambah Data User</a>
+                    <a href="<?= base_url(); ?>admin/tambah" class="btn btn-primary">Tambah Data User</a>
+                    <br><br><br><br>
                 </div>
             </div>
-
         </div>
     </div>
 </div> 

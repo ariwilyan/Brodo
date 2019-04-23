@@ -20,6 +20,8 @@
 
     <!-- icon title web -->
     <link rel="icon" type="image/png" href="<?php echo base_url("assets/gambar/brodo.png");?>">
+
+    
     
     <style type="text/css">
         input[type=submit]{
